@@ -75,8 +75,27 @@ function validateRegister(){
 function registerUser(){
 
     if(validateRegister()){
+
+        let student={
+
+            name:document.getElementById("name").value.trim(),
+
+            email:document.getElementById("email").value.trim(),
+
+            password:document.getElementById("password").value,
+
+            department:document.getElementById("department").value.trim(),
+
+            course:document.getElementById("course").value
+
+        };
+
+        saveStudent(student);
+
         alert("Registration Successful!");
+
         window.location.href="login.html";
+
     }
 
 }
